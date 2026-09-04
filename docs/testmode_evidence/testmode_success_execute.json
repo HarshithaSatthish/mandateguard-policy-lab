@@ -1,0 +1,28 @@
+{
+  "executed": true,
+  "execution_state": "EXECUTED",
+  "financial_truth": "RECOVERABLE",
+  "mode": "razorpay_test_mode_execute",
+  "reason_code": "FALLBACK_PAYMENT_LINK_CREATED",
+  "receipt": {
+    "action_type": "CREATE_PAYMENT_LINK_FALLBACK",
+    "amount_minor": 1000,
+    "authority_expires_at": "2026-09-02T13:30:48.020856+00:00",
+    "case_id": "case_testmode_success_001",
+    "currency": "INR",
+    "decision_evidence_hash": "4ff082b67d5de50e40ba52cc4cc2af0ec4d3dc15433adf8d521fee571709d746",
+    "decision_id": "decision_testmode_001",
+    "mandate_id": "mandate_testmode_001",
+    "order_id": "order_TXB4qzzTs8TtGq",
+    "payment_link_id": "plink_TXBTaO6FdDpshr",
+    "policy_version": "mandateguard_policy_0.2",
+    "prewrite_evidence_hash": "40a355f51436b57e4d2600a32b60e35b54279ac6c8a66aedcd27f2b8b0f03bf0",
+    "prewrite_resolution": "RECOVERABLE",
+    "reference_id": "rt_ae0dc6ae69afb1b7700e90c39a4b49ff"
+  },
+  "truth_reason_codes": [
+    "ALL_CURRENT_PAYMENT_ATTEMPTS_FAILED",
+    "NO_CAPTURED_OR_INFLIGHT_PAYMENT"
+  ],
+  "write_outcome_unknown": false
+}

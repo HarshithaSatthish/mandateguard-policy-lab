@@ -1,0 +1,888 @@
+{
+  "configured": {
+    "harm_multiplier": 1.0,
+    "violation_cost_inr": 50.0
+  },
+  "grids": {
+    "harm_multiplier": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      5.0,
+      10.0
+    ],
+    "violation_cost_inr": [
+      0.0,
+      10.0,
+      25.0,
+      50.0,
+      100.0,
+      200.0,
+      400.0,
+      800.0,
+      1600.0
+    ]
+  },
+  "method": {
+    "crossover": "lowest swept price at which a fully guarded arm (B2 or B3) becomes the recommended arm; null means no swept price makes a guarded arm win",
+    "harm_multiplier_curve": "net value equals incremental recovered minus realized harm times the multiplier, minus human review cost and model cost; realized harm counts only prohibited actions that actually reached the provider",
+    "note": "Both curves re-price one frozen benchmark run. No arm is re-executed, so every point on both curves reads the same ledger and the same decisions.",
+    "tie_break": "canonical arm order",
+    "violation_cost_curve": "net value equals incremental recovered minus independently detected violations times the flat cost, minus human review cost and model cost"
+  },
+  "per_regime": {
+    "R1_TRANSIENT": {
+      "guarded_arm_wins_at_harm_multiplier": 1.0,
+      "guarded_arm_wins_at_violation_cost_inr": 400.0,
+      "harm_multiplier_curve": [
+        {
+          "harm_multiplier": 0.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 21287.45,
+            "B1.5": 20560.95,
+            "B2": 6386.15,
+            "B2.25": 15889.9,
+            "B2.5": 8323.15,
+            "B2.75": 7789.4,
+            "B3": 6473.35,
+            "RZP": 12941.3
+          },
+          "recommended_arm": "B1"
+        },
+        {
+          "harm_multiplier": 0.25,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 13085.9375,
+            "B1.5": 16989.725,
+            "B2": 6386.15,
+            "B2.25": 13248.5625,
+            "B2.5": 7280.2375,
+            "B2.75": 7014.075,
+            "B3": 6473.35,
+            "RZP": 8183.8875
+          },
+          "recommended_arm": "B1.5"
+        },
+        {
+          "harm_multiplier": 0.5,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 4884.425,
+            "B1.5": 13418.5,
+            "B2": 6386.15,
+            "B2.25": 10607.225,
+            "B2.5": 6237.325,
+            "B2.75": 6238.75,
+            "B3": 6473.35,
+            "RZP": 3426.475
+          },
+          "recommended_arm": "B1.5"
+        },
+        {
+          "harm_multiplier": 1.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -11518.6,
+            "B1.5": 6276.05,
+            "B2": 6386.15,
+            "B2.25": 5324.55,
+            "B2.5": 4151.5,
+            "B2.75": 4688.1,
+            "B3": 6473.35,
+            "RZP": -6088.35
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 1.5,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -27921.625,
+            "B1.5": -866.4,
+            "B2": 6386.15,
+            "B2.25": 41.875,
+            "B2.5": 2065.675,
+            "B2.75": 3137.45,
+            "B3": 6473.35,
+            "RZP": -15603.175
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 2.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -44324.65,
+            "B1.5": -8008.85,
+            "B2": 6386.15,
+            "B2.25": -5240.8,
+            "B2.5": -20.15,
+            "B2.75": 1586.8,
+            "B3": 6473.35,
+            "RZP": -25118.0
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 3.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -77130.7,
+            "B1.5": -22293.75,
+            "B2": 6386.15,
+            "B2.25": -15806.15,
+            "B2.5": -4191.8,
+            "B2.75": -1514.5,
+            "B3": 6473.35,
+            "RZP": -44147.65
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 5.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -142742.8,
+            "B1.5": -50863.55,
+            "B2": 6386.15,
+            "B2.25": -36936.85,
+            "B2.5": -12535.1,
+            "B2.75": -7717.1,
+            "B3": 6473.35,
+            "RZP": -82206.95
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 10.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -306773.05,
+            "B1.5": -122288.05,
+            "B2": 6386.15,
+            "B2.25": -89763.6,
+            "B2.5": -33393.35,
+            "B2.75": -23223.6,
+            "B3": 6473.35,
+            "RZP": -177355.2
+          },
+          "recommended_arm": "B3"
+        }
+      ],
+      "recommended_arm_span": [
+        "B1",
+        "B1.5",
+        "B3"
+      ],
+      "violation_cost_curve": [
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 21287.45,
+            "B1.5": 20560.95,
+            "B2": 6386.15,
+            "B2.25": 15889.9,
+            "B2.5": 8323.15,
+            "B2.75": 7789.4,
+            "B3": 6473.35,
+            "RZP": 12941.3
+          },
+          "recommended_arm": "B1",
+          "violation_cost_inr": 0.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 19240.95,
+            "B1.5": 19921.95,
+            "B2": 6386.15,
+            "B2.25": 15468.4,
+            "B2.5": 8246.15,
+            "B2.75": 7737.9,
+            "B3": 6473.35,
+            "RZP": 12083.3
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 10.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 16171.2,
+            "B1.5": 18963.45,
+            "B2": 6386.15,
+            "B2.25": 14836.15,
+            "B2.5": 8130.65,
+            "B2.75": 7660.65,
+            "B3": 6473.35,
+            "RZP": 10796.3
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 25.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 11054.95,
+            "B1.5": 17365.95,
+            "B2": 6386.15,
+            "B2.25": 13782.4,
+            "B2.5": 7938.15,
+            "B2.75": 7531.9,
+            "B3": 6473.35,
+            "RZP": 8651.3
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 50.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 822.45,
+            "B1.5": 14170.95,
+            "B2": 6386.15,
+            "B2.25": 11674.9,
+            "B2.5": 7553.15,
+            "B2.75": 7274.4,
+            "B3": 6473.35,
+            "RZP": 4361.3
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 100.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -19642.55,
+            "B1.5": 7780.95,
+            "B2": 6386.15,
+            "B2.25": 7459.9,
+            "B2.5": 6783.15,
+            "B2.75": 6759.4,
+            "B3": 6473.35,
+            "RZP": -4218.7
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 200.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -60572.55,
+            "B1.5": -4999.05,
+            "B2": 6386.15,
+            "B2.25": -970.1,
+            "B2.5": 5243.15,
+            "B2.75": 5729.4,
+            "B3": 6473.35,
+            "RZP": -21378.7
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 400.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -142432.55,
+            "B1.5": -30559.05,
+            "B2": 6386.15,
+            "B2.25": -17830.1,
+            "B2.5": 2163.15,
+            "B2.75": 3669.4,
+            "B3": 6473.35,
+            "RZP": -55698.7
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 800.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -306152.55,
+            "B1.5": -81679.05,
+            "B2": 6386.15,
+            "B2.25": -51550.1,
+            "B2.5": -3996.85,
+            "B2.75": -450.6,
+            "B3": 6473.35,
+            "RZP": -124338.7
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 1600.0
+        }
+      ]
+    },
+    "R2_TERMINAL": {
+      "guarded_arm_wins_at_harm_multiplier": 1.5,
+      "guarded_arm_wins_at_violation_cost_inr": 400.0,
+      "harm_multiplier_curve": [
+        {
+          "harm_multiplier": 0.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 9274.7,
+            "B1.5": 8817.7,
+            "B2": 2536.15,
+            "B2.25": 6985.65,
+            "B2.5": 3297.3,
+            "B2.75": 3087.65,
+            "B3": 2705.9,
+            "RZP": 5089.45
+          },
+          "recommended_arm": "B1"
+        },
+        {
+          "harm_multiplier": 0.25,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -3984.5625,
+            "B1.5": 7366.7,
+            "B2": 2536.15,
+            "B2.25": 5960.2875,
+            "B2.5": 2934.825,
+            "B2.75": 2888.7,
+            "B3": 2705.9,
+            "RZP": -3728.6375
+          },
+          "recommended_arm": "B1.5"
+        },
+        {
+          "harm_multiplier": 0.5,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -17243.825,
+            "B1.5": 5915.7,
+            "B2": 2536.15,
+            "B2.25": 4934.925,
+            "B2.5": 2572.35,
+            "B2.75": 2689.75,
+            "B3": 2705.9,
+            "RZP": -12546.725
+          },
+          "recommended_arm": "B1.5"
+        },
+        {
+          "harm_multiplier": 1.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -43762.35,
+            "B1.5": 3013.7,
+            "B2": 2536.15,
+            "B2.25": 2884.2,
+            "B2.5": 1847.4,
+            "B2.75": 2291.85,
+            "B3": 2705.9,
+            "RZP": -30182.9
+          },
+          "recommended_arm": "B1.5"
+        },
+        {
+          "harm_multiplier": 1.5,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -70280.875,
+            "B1.5": 111.7,
+            "B2": 2536.15,
+            "B2.25": 833.475,
+            "B2.5": 1122.45,
+            "B2.75": 1893.95,
+            "B3": 2705.9,
+            "RZP": -47819.075
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 2.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -96799.4,
+            "B1.5": -2790.3,
+            "B2": 2536.15,
+            "B2.25": -1217.25,
+            "B2.5": 397.5,
+            "B2.75": 1496.05,
+            "B3": 2705.9,
+            "RZP": -65455.25
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 3.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -149836.45,
+            "B1.5": -8594.3,
+            "B2": 2536.15,
+            "B2.25": -5318.7,
+            "B2.5": -1052.4,
+            "B2.75": 700.25,
+            "B3": 2705.9,
+            "RZP": -100727.6
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 5.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -255910.55,
+            "B1.5": -20202.3,
+            "B2": 2536.15,
+            "B2.25": -13521.6,
+            "B2.5": -3952.2,
+            "B2.75": -891.35,
+            "B3": 2705.9,
+            "RZP": -171272.3
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 10.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -521095.8,
+            "B1.5": -49222.3,
+            "B2": 2536.15,
+            "B2.25": -34028.85,
+            "B2.5": -11201.7,
+            "B2.75": -4870.35,
+            "B3": 2705.9,
+            "RZP": -347634.05
+          },
+          "recommended_arm": "B3"
+        }
+      ],
+      "recommended_arm_span": [
+        "B1",
+        "B1.5",
+        "B3"
+      ],
+      "violation_cost_curve": [
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 9274.7,
+            "B1.5": 8817.7,
+            "B2": 2536.15,
+            "B2.25": 6985.65,
+            "B2.5": 3297.3,
+            "B2.75": 3087.65,
+            "B3": 2705.9,
+            "RZP": 5089.45
+          },
+          "recommended_arm": "B1",
+          "violation_cost_inr": 0.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 7076.2,
+            "B1.5": 8546.7,
+            "B2": 2536.15,
+            "B2.25": 6816.65,
+            "B2.5": 3262.3,
+            "B2.75": 3062.65,
+            "B3": 2705.9,
+            "RZP": 3820.95
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 10.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 3778.45,
+            "B1.5": 8140.2,
+            "B2": 2536.15,
+            "B2.25": 6563.15,
+            "B2.5": 3209.8,
+            "B2.75": 3025.15,
+            "B3": 2705.9,
+            "RZP": 1918.2
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 25.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -1717.8,
+            "B1.5": 7462.7,
+            "B2": 2536.15,
+            "B2.25": 6140.65,
+            "B2.5": 3122.3,
+            "B2.75": 2962.65,
+            "B3": 2705.9,
+            "RZP": -1253.05
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 50.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -12710.3,
+            "B1.5": 6107.7,
+            "B2": 2536.15,
+            "B2.25": 5295.65,
+            "B2.5": 2947.3,
+            "B2.75": 2837.65,
+            "B3": 2705.9,
+            "RZP": -7595.55
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 100.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -34695.3,
+            "B1.5": 3397.7,
+            "B2": 2536.15,
+            "B2.25": 3605.65,
+            "B2.5": 2597.3,
+            "B2.75": 2587.65,
+            "B3": 2705.9,
+            "RZP": -20280.55
+          },
+          "recommended_arm": "B2.25",
+          "violation_cost_inr": 200.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -78665.3,
+            "B1.5": -2022.3,
+            "B2": 2536.15,
+            "B2.25": 225.65,
+            "B2.5": 1897.3,
+            "B2.75": 2087.65,
+            "B3": 2705.9,
+            "RZP": -45650.55
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 400.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -166605.3,
+            "B1.5": -12862.3,
+            "B2": 2536.15,
+            "B2.25": -6534.35,
+            "B2.5": 497.3,
+            "B2.75": 1087.65,
+            "B3": 2705.9,
+            "RZP": -96390.55
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 800.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -342485.3,
+            "B1.5": -34542.3,
+            "B2": 2536.15,
+            "B2.25": -20054.35,
+            "B2.5": -2302.7,
+            "B2.75": -912.35,
+            "B3": 2705.9,
+            "RZP": -197870.55
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 1600.0
+        }
+      ]
+    },
+    "R3_AMBIGUOUS": {
+      "guarded_arm_wins_at_harm_multiplier": 1.0,
+      "guarded_arm_wins_at_violation_cost_inr": 400.0,
+      "harm_multiplier_curve": [
+        {
+          "harm_multiplier": 0.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 9081.15,
+            "B1.5": 8863.9,
+            "B2": 3016.2,
+            "B2.25": 7092.1,
+            "B2.5": 4136.75,
+            "B2.75": 3802.2,
+            "B3": 3191.1,
+            "RZP": 6620.95
+          },
+          "recommended_arm": "B1"
+        },
+        {
+          "harm_multiplier": 0.25,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -119.1625,
+            "B1.5": 6872.1125,
+            "B2": 3016.2,
+            "B2.25": 5682.675,
+            "B2.5": 3514.425,
+            "B2.75": 3337.2,
+            "B3": 3191.1,
+            "RZP": 1031.6875
+          },
+          "recommended_arm": "B1.5"
+        },
+        {
+          "harm_multiplier": 0.5,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -9319.475,
+            "B1.5": 4880.325,
+            "B2": 3016.2,
+            "B2.25": 4273.25,
+            "B2.5": 2892.1,
+            "B2.75": 2872.2,
+            "B3": 3191.1,
+            "RZP": -4557.575
+          },
+          "recommended_arm": "B1.5"
+        },
+        {
+          "harm_multiplier": 1.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -27720.1,
+            "B1.5": 896.75,
+            "B2": 3016.2,
+            "B2.25": 1454.4,
+            "B2.5": 1647.45,
+            "B2.75": 1942.2,
+            "B3": 3191.1,
+            "RZP": -15736.1
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 1.5,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -46120.725,
+            "B1.5": -3086.825,
+            "B2": 3016.2,
+            "B2.25": -1364.45,
+            "B2.5": 402.8,
+            "B2.75": 1012.2,
+            "B3": 3191.1,
+            "RZP": -26914.625
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 2.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -64521.35,
+            "B1.5": -7070.4,
+            "B2": 3016.2,
+            "B2.25": -4183.3,
+            "B2.5": -841.85,
+            "B2.75": 82.2,
+            "B3": 3191.1,
+            "RZP": -38093.15
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 3.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -101322.6,
+            "B1.5": -15037.55,
+            "B2": 3016.2,
+            "B2.25": -9821.0,
+            "B2.5": -3331.15,
+            "B2.75": -1777.8,
+            "B3": 3191.1,
+            "RZP": -60450.2
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 5.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -174925.1,
+            "B1.5": -30971.85,
+            "B2": 3016.2,
+            "B2.25": -21096.4,
+            "B2.5": -8309.75,
+            "B2.75": -5497.8,
+            "B3": 3191.1,
+            "RZP": -105164.3
+          },
+          "recommended_arm": "B3"
+        },
+        {
+          "harm_multiplier": 10.0,
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -358931.35,
+            "B1.5": -70807.6,
+            "B2": 3016.2,
+            "B2.25": -49284.9,
+            "B2.5": -20756.25,
+            "B2.75": -14797.8,
+            "B3": 3191.1,
+            "RZP": -216949.55
+          },
+          "recommended_arm": "B3"
+        }
+      ],
+      "recommended_arm_span": [
+        "B1",
+        "B1.5",
+        "B3"
+      ],
+      "violation_cost_curve": [
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 9081.15,
+            "B1.5": 8863.9,
+            "B2": 3016.2,
+            "B2.25": 7092.1,
+            "B2.5": 4136.75,
+            "B2.75": 3802.2,
+            "B3": 3191.1,
+            "RZP": 6620.95
+          },
+          "recommended_arm": "B1",
+          "violation_cost_inr": 0.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 7054.65,
+            "B1.5": 8560.4,
+            "B2": 3016.2,
+            "B2.25": 6890.6,
+            "B2.5": 4096.25,
+            "B2.75": 3770.7,
+            "B3": 3191.1,
+            "RZP": 5557.45
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 10.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": 4014.9,
+            "B1.5": 8105.15,
+            "B2": 3016.2,
+            "B2.25": 6588.35,
+            "B2.5": 4035.5,
+            "B2.75": 3723.45,
+            "B3": 3191.1,
+            "RZP": 3962.2
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 25.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -1051.35,
+            "B1.5": 7346.4,
+            "B2": 3016.2,
+            "B2.25": 6084.6,
+            "B2.5": 3934.25,
+            "B2.75": 3644.7,
+            "B3": 3191.1,
+            "RZP": 1303.45
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 50.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -11183.85,
+            "B1.5": 5828.9,
+            "B2": 3016.2,
+            "B2.25": 5077.1,
+            "B2.5": 3731.75,
+            "B2.75": 3487.2,
+            "B3": 3191.1,
+            "RZP": -4014.05
+          },
+          "recommended_arm": "B1.5",
+          "violation_cost_inr": 100.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -31448.85,
+            "B1.5": 2793.9,
+            "B2": 3016.2,
+            "B2.25": 3062.1,
+            "B2.5": 3326.75,
+            "B2.75": 3172.2,
+            "B3": 3191.1,
+            "RZP": -14649.05
+          },
+          "recommended_arm": "B2.5",
+          "violation_cost_inr": 200.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -71978.85,
+            "B1.5": -3276.1,
+            "B2": 3016.2,
+            "B2.25": -967.9,
+            "B2.5": 2516.75,
+            "B2.75": 2542.2,
+            "B3": 3191.1,
+            "RZP": -35919.05
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 400.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -153038.85,
+            "B1.5": -15416.1,
+            "B2": 3016.2,
+            "B2.25": -9027.9,
+            "B2.5": 896.75,
+            "B2.75": 1282.2,
+            "B3": 3191.1,
+            "RZP": -78459.05
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 800.0
+        },
+        {
+          "net_value_by_arm_inr": {
+            "B0": 0.0,
+            "B1": -315158.85,
+            "B1.5": -39696.1,
+            "B2": 3016.2,
+            "B2.25": -25147.9,
+            "B2.5": -2343.25,
+            "B2.75": -1237.8,
+            "B3": 3191.1,
+            "RZP": -163539.05
+          },
+          "recommended_arm": "B3",
+          "violation_cost_inr": 1600.0
+        }
+      ]
+    }
+  }
+}

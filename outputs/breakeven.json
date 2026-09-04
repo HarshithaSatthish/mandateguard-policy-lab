@@ -1,0 +1,141 @@
+{
+  "configured_costs_inr": {
+    "harm_multiplier": 1.0,
+    "human_review_cost": 0.0,
+    "violation_cost": 50.0
+  },
+  "method": {
+    "b2_vs_b1_breakeven": "(B1 incremental recovered minus B2 incremental recovered) divided by (B1 violations minus B2 violations)",
+    "harm_priced_recommendation": "highest generated mean net value when a prohibited action is priced at the money it actually moved times the configured harm multiplier, rather than at a flat rate per breach",
+    "marginal_cost": "recovery given up divided by violations avoided; n/a when the lower arm does not avoid violations",
+    "recommendation": "highest generated mean net value at the configured project violation and human review costs, with canonical order as deterministic tie break"
+  },
+  "per_regime": {
+    "R1_TRANSIENT": {
+      "b1_5_to_b2_marginal_recovery_cost_per_violation_avoided_inr": 221.8279,
+      "b1_to_b1_5_marginal_recovery_cost_per_violation_avoided_inr": 5.1616,
+      "b2_vs_b1_breakeven_violation_cost_inr": 72.8136,
+      "net_value_by_arm_inr": {
+        "B0": 0.0,
+        "B1": 11054.95,
+        "B1.5": 17365.95,
+        "B2": 6386.15,
+        "B2.25": 13782.4,
+        "B2.5": 7938.15,
+        "B2.75": 7531.9,
+        "B3": 6473.35,
+        "RZP": 8651.3
+      },
+      "net_value_harm_priced_by_arm_inr": {
+        "B0": 0.0,
+        "B1": -11518.6,
+        "B1.5": 6276.05,
+        "B2": 6386.15,
+        "B2.25": 5324.55,
+        "B2.5": 4151.5,
+        "B2.75": 4688.1,
+        "B3": 6473.35,
+        "RZP": -6088.35
+      },
+      "realized_harm_by_arm_inr": {
+        "B0": 0.0,
+        "B1": 32806.05,
+        "B1.5": 14284.9,
+        "B2": 0.0,
+        "B2.25": 10565.35,
+        "B2.5": 4171.65,
+        "B2.75": 3101.3,
+        "B3": 0.0,
+        "RZP": 19029.65
+      },
+      "recommended_arm_at_configured_cost": "B1.5",
+      "recommended_arm_at_harm_price": "B3",
+      "recommended_net_value_at_harm_price_inr": 6473.35,
+      "recommended_net_value_inr": 17365.95
+    },
+    "R2_TERMINAL": {
+      "b1_5_to_b2_marginal_recovery_cost_per_violation_avoided_inr": 231.7915,
+      "b1_to_b1_5_marginal_recovery_cost_per_violation_avoided_inr": 2.3709,
+      "b2_vs_b1_breakeven_violation_cost_inr": 30.6507,
+      "net_value_by_arm_inr": {
+        "B0": 0.0,
+        "B1": -1717.8,
+        "B1.5": 7462.7,
+        "B2": 2536.15,
+        "B2.25": 6140.65,
+        "B2.5": 3122.3,
+        "B2.75": 2962.65,
+        "B3": 2705.9,
+        "RZP": -1253.05
+      },
+      "net_value_harm_priced_by_arm_inr": {
+        "B0": 0.0,
+        "B1": -43762.35,
+        "B1.5": 3013.7,
+        "B2": 2536.15,
+        "B2.25": 2884.2,
+        "B2.5": 1847.4,
+        "B2.75": 2291.85,
+        "B3": 2705.9,
+        "RZP": -30182.9
+      },
+      "realized_harm_by_arm_inr": {
+        "B0": 0.0,
+        "B1": 53037.05,
+        "B1.5": 5804.0,
+        "B2": 0.0,
+        "B2.25": 4101.45,
+        "B2.5": 1449.9,
+        "B2.75": 795.8,
+        "B3": 0.0,
+        "RZP": 35272.35
+      },
+      "recommended_arm_at_configured_cost": "B1.5",
+      "recommended_arm_at_harm_price": "B1.5",
+      "recommended_net_value_at_harm_price_inr": 3013.7,
+      "recommended_net_value_inr": 7462.7
+    },
+    "R3_AMBIGUOUS": {
+      "b1_5_to_b2_marginal_recovery_cost_per_violation_avoided_inr": 192.6755,
+      "b1_to_b1_5_marginal_recovery_cost_per_violation_avoided_inr": 1.2609,
+      "b2_vs_b1_breakeven_violation_cost_inr": 29.9282,
+      "net_value_by_arm_inr": {
+        "B0": 0.0,
+        "B1": -1051.35,
+        "B1.5": 7346.4,
+        "B2": 3016.2,
+        "B2.25": 6084.6,
+        "B2.5": 3934.25,
+        "B2.75": 3644.7,
+        "B3": 3191.1,
+        "RZP": 1303.45
+      },
+      "net_value_harm_priced_by_arm_inr": {
+        "B0": 0.0,
+        "B1": -27720.1,
+        "B1.5": 896.75,
+        "B2": 3016.2,
+        "B2.25": 1454.4,
+        "B2.5": 1647.45,
+        "B2.75": 1942.2,
+        "B3": 3191.1,
+        "RZP": -15736.1
+      },
+      "realized_harm_by_arm_inr": {
+        "B0": 0.0,
+        "B1": 36801.25,
+        "B1.5": 7967.15,
+        "B2": 0.0,
+        "B2.25": 5637.7,
+        "B2.5": 2489.3,
+        "B2.75": 1860.0,
+        "B3": 0.0,
+        "RZP": 22357.05
+      },
+      "recommended_arm_at_configured_cost": "B1.5",
+      "recommended_arm_at_harm_price": "B3",
+      "recommended_net_value_at_harm_price_inr": 3191.1,
+      "recommended_net_value_inr": 7346.4
+    }
+  }
+}

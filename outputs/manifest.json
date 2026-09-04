@@ -1,0 +1,62 @@
+{
+  "arms": [
+    "B0",
+    "B1",
+    "B1.5",
+    "RZP",
+    "B2.25",
+    "B2.5",
+    "B2.75",
+    "B2",
+    "B3"
+  ],
+  "dataset_count": 60,
+  "dataset_sha256": "cbf161e2c06c35682b696e2d3bb50c54b27c35ad28aae7a63e85bb9343ef5b4e",
+  "evidence": {
+    "full_local_path": "generated/evidence_ledger_full.json",
+    "sample_manifest": "evidence_manifest.json",
+    "shipped_file": "evidence_ledger.json",
+    "shipped_row_count": 900
+  },
+  "final": true,
+  "harm_model": "compliance_exposure_independent_of_failure_reason",
+  "harm_multiplier": 1.0,
+  "human_review_cost_inr": 0.0,
+  "input_contract": "razorpay_shaped_test_payload_v1",
+  "interpreter_mode": "deterministic_offline",
+  "n_per_seed": 100,
+  "outputs_sha256": "e021e2f5ee9ef7f722e3bc580bab32bdd6db548dfe6560e72de6d6b2d6f16ceb",
+  "policy_contract": "scheduled_upi_autopay_only",
+  "provider_adapter": "bailiff.razorpay_adapter.normalize_razorpay_autopay_payload",
+  "regimes": [
+    "R1_TRANSIENT",
+    "R2_TERMINAL",
+    "R3_AMBIGUOUS"
+  ],
+  "rules_provenance": "project_policy_with_source_tiers",
+  "rules_sha256": "70e2909d26598695f74ae9e4d5c81dabb4c772d1f6d376d6567923cdc8a52506",
+  "seeds": [
+    1701,
+    2029,
+    3313,
+    4157,
+    5011,
+    6073,
+    7127,
+    8191,
+    9227,
+    10267,
+    11003,
+    12011,
+    13007,
+    14009,
+    15013,
+    16033,
+    17027,
+    18041,
+    19013,
+    20011
+  ],
+  "version": "0.9.0",
+  "violation_cost_inr": 50.0
+}

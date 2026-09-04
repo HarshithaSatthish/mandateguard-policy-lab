@@ -1,0 +1,11 @@
+{
+  "executed": false,
+  "execution_state": "NOT_EXECUTED",
+  "financial_truth": "PAID",
+  "mode": "razorpay_test_mode_execute",
+  "reason_code": "SAFE_BLOCK_ALREADY_PAID",
+  "truth_reason_codes": [
+    "CURRENT_RAZORPAY_ORDER_PAID"
+  ],
+  "write_outcome_unknown": false
+}

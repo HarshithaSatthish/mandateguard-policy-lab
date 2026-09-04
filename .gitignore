@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.venv/
+.env
+.env.*
+!.env.example
+*.egg-info/
+outputs/generated/
+outputs/demo/
+recoverytruth_receipt*.json
+recoverytruth_proof*.json
+*.recoverytruth-receipt.json
+*.recoverytruth-proof.json

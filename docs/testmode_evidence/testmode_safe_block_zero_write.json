@@ -1,0 +1,15 @@
+{
+    "order_id":  "order_TXBbDnCsICv8l4",
+    "execution_state":  "NOT_EXECUTED",
+    "payment_links_after":  0,
+    "captured_payment_id":  "pay_TXBdfDmpTiK8jO",
+    "recoverytruth_result":  "SAFE_BLOCK_ALREADY_PAID",
+    "executed":  false,
+    "recovery_reference":  "rt_813ec13e2bffc16915f45910f203a9ed",
+    "currency":  "INR",
+    "amount_minor":  1000,
+    "mode":  "razorpay_test_mode_safe_block_zero_write",
+    "order_status":  "paid",
+    "payment_links_before":  0,
+    "zero_new_fallback_writes":  true
+}

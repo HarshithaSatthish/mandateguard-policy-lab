@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mandateguard-policy-lab"
+version = "0.9.0"
+description = "Replayable scheduled AutoPay recovery policy evaluation with bounded execution"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn>=0.32.0",
+  "matplotlib>=3.8.0",
+  "httpx>=0.27.0",
+  "tzdata>=2024.1",
+]
+
+[project.optional-dependencies]
+test = [
+  "hypothesis>=6.90",
+  "pytest>=8.0",
+]
+interpreter = [
+  "openai>=1.50.0",
+]
+ui = [
+  "streamlit>=1.30",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["bailiff*"]
+
+[tool.setuptools.package-data]
+bailiff = ["rules.json"]

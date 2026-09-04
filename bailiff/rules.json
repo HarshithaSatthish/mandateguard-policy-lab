@@ -1,0 +1,99 @@
+{
+  "effective_date": "2026-01-01",
+  "rules": {
+    "amount_review_threshold_minor": {
+      "classification": "PROJECT_POLICY",
+      "effective_date": "2026-01-01",
+      "source": "Experiment authority policy",
+      "source_url": "",
+      "value": 1500000
+    },
+    "attempt_cap": {
+      "classification": "PROJECT_POLICY",
+      "effective_date": "2026-01-01",
+      "source": "Configurable experiment authority constraint",
+      "source_url": "",
+      "value": 4
+    },
+    "harm_multiplier": {
+      "classification": "PROJECT_ASSUMPTION",
+      "effective_date": "2026-01-01",
+      "source": "Cost of a prohibited debit expressed as a multiple of the transaction amount. 1.0 is the minimum defensible price: the money moved must at least be reversed. Penalty, chargeback, and remediation cost are excluded, so this is a lower bound.",
+      "source_url": "",
+      "value": 1.0
+    },
+    "human_review_cost_inr": {
+      "classification": "PROJECT_ASSUMPTION",
+      "effective_date": "2026-01-01",
+      "source": "No labor cost is charged in the base simulator; CLI override is supported",
+      "source_url": "",
+      "value": 0.0
+    },
+    "minimum_interpreter_confidence": {
+      "classification": "PROJECT_POLICY",
+      "effective_date": "2026-01-01",
+      "source": "Ambiguity safety policy",
+      "source_url": "",
+      "value": 0.7
+    },
+    "minimum_retry_gap_hours": {
+      "classification": "PROJECT_POLICY_PENDING_PRIMARY_PIN",
+      "effective_date": "2026-01-01",
+      "source": "Configured minimum interval between scheduled recovery attempts",
+      "source_url": "",
+      "value": 24
+    },
+    "non_peak_windows_ist": {
+      "classification": "REPORTED_REQUIREMENT_PENDING_PRIMARY_PIN",
+      "effective_date": "2025-08-01",
+      "source": "NPCI circular identifier recorded in research notes; primary PDF must be pinned before regulatory wording",
+      "source_url": "https://www.npci.org.in/circulars/upi",
+      "value": [
+        [
+          0.0,
+          10.0
+        ],
+        [
+          13.0,
+          17.0
+        ],
+        [
+          21.5,
+          24.0
+        ]
+      ]
+    },
+    "pdn_exempt_mcc": {
+      "classification": "PROJECT_POLICY_PENDING_PRIMARY_PIN",
+      "effective_date": "2026-01-01",
+      "source": "Configured simulator exemption set",
+      "source_url": "",
+      "value": [
+        "4784",
+        "7412"
+      ]
+    },
+    "pre_debit_lead_hours": {
+      "classification": "OFFICIAL_PAGE_BASELINE",
+      "effective_date": "2026-01-01",
+      "source": "NPCI UPI AutoPay public page",
+      "source_url": "https://www.npci.org.in/product/autopay",
+      "value": 24
+    },
+    "razorpay_documented_retry_attempts": {
+      "classification": "VENDOR_DOCUMENTED",
+      "effective_date": "2026-08-24",
+      "source": "Razorpay Subscriptions payment retries: 'In a T+3 days cycle, we will retry the payment thrice. That is, once every day for 3 days, excluding the date of the charge.' Documented for the card model. This project's RZP arm uses that card schedule as a fixed temporal reference policy; it does not reproduce or benchmark Razorpay's Intelligent UPI Retry Engine, and MandateGuard has not been evaluated against Razorpay's production decision logic.",
+      "source_url": "https://razorpay.com/docs/payments/subscriptions/payment-retries/",
+      "value": 3
+    },
+    "violation_cost_inr": {
+      "classification": "PROJECT_ASSUMPTION",
+      "effective_date": "2026-01-01",
+      "source": "Scenario value used to price each independently detected prohibited action",
+      "source_url": "",
+      "value": 50.0
+    }
+  },
+  "version": "mandateguard_rules_0.3"
+}

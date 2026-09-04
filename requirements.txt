@@ -1,0 +1,20 @@
+# The one-command judge path:
+#     pip install -r requirements.txt
+#     python3 scripts/demo60.py
+#     python3 -m pytest -q
+#
+# hypothesis is REQUIRED, not optional. Without it pytest still exits with a
+# suite that looks almost complete — tests/test_properties.py collects as a
+# single skip, the total silently drops by nine, and the test that checks the
+# advertised count then fails. A reviewer reasonably reads that as the project
+# overstating its own numbers. It was missing from this file once and produced
+# exactly that report, so it is pinned here beside pytest.
+-e .
+fastapi>=0.115.0
+uvicorn>=0.32.0
+pytest>=8.0
+hypothesis>=6.90
+httpx>=0.27.0
+matplotlib>=3.8.0
+openai>=1.50.0
+tzdata>=2024.1

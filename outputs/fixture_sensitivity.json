@@ -1,0 +1,612 @@
+{
+  "a_guarded_arm_wins_at_configured_price_in": "18/45",
+  "b3_dominates_b2_in": "35/45",
+  "baseline_harm_probability_by_state": {
+    "attempt_cap_exceeded": 0.6,
+    "blocked_mandate_state": 0.95,
+    "customer_opted_out": 0.9,
+    "peak_window_execution": 0.15,
+    "pre_debit_notice_invalid": 0.45,
+    "terminal_reason": 1.0
+  },
+  "cells": [
+    {
+      "compliance_harm_scale": 0.25,
+      "exposure_scale": 0.5,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2.75"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": null,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 10.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2.75",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 5.0,
+          "recommended_arm_at_1x": "B1.5"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 0.25,
+      "exposure_scale": 1.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 5.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 10.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2.75",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 5.0,
+          "recommended_arm_at_1x": "B1.5"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 0.25,
+      "exposure_scale": 2.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 10.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 10.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 3.0,
+          "recommended_arm_at_1x": "B1.5"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 0.5,
+      "exposure_scale": 0.5,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 5.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 5.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 2.0,
+          "recommended_arm_at_1x": "B2.25"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 0.5,
+      "exposure_scale": 1.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 3.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 5.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 2.0,
+          "recommended_arm_at_1x": "B2.25"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 0.5,
+      "exposure_scale": 2.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 2.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 3.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 2.0,
+          "recommended_arm_at_1x": "B1.5"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 1.0,
+      "exposure_scale": 0.5,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 2.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2.5",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 2.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 1.0,
+      "exposure_scale": 1.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 1.5,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 2.0,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 1.0,
+      "exposure_scale": 2.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B2"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 1.5,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 1.5,
+      "exposure_scale": 0.5,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 1.5,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2.5",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 1.5,
+      "exposure_scale": 1.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 1.5,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 1.5,
+      "exposure_scale": 2.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B2"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 2.0,
+      "exposure_scale": 0.5,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 1.5,
+          "recommended_arm_at_1x": "B2.25"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2.5",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 2.0,
+      "exposure_scale": 1.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": false,
+          "guarded_arm_wins_at_harm_multiplier": 1.5,
+          "recommended_arm_at_1x": "B1.5"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    },
+    {
+      "compliance_harm_scale": 2.0,
+      "exposure_scale": 2.0,
+      "per_regime": {
+        "R1_TRANSIENT": {
+          "b3_dominates_b2": false,
+          "dominated_arms": [
+            "B0",
+            "RZP"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B2"
+        },
+        "R2_TERMINAL": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        },
+        "R3_AMBIGUOUS": {
+          "b3_dominates_b2": true,
+          "dominated_arms": [
+            "B0",
+            "RZP",
+            "B2"
+          ],
+          "guarded_arm_wins_at_1x": true,
+          "guarded_arm_wins_at_harm_multiplier": 1.0,
+          "recommended_arm_at_1x": "B3"
+        }
+      }
+    }
+  ],
+  "cells_evaluated": 15,
+  "method": {
+    "compliance_harm_scale": "multiplier on every non terminal harm probability, capped at 1.0",
+    "exposure_scale": "multiplier on the independent opt out and blocked mandate rates",
+    "protocol": "5 seeds x 100 cases x 3 regimes per cell",
+    "swept": "fixture harm assumptions, not policy code or runtime configuration",
+    "terminal_reason_note": "terminal reasons stay certainly harmful; that is a definition, not a calibration"
+  },
+  "n_per_seed": 100,
+  "regime_observations": 45,
+  "seeds": [
+    1701,
+    2029,
+    3313,
+    4157,
+    5011
+  ]
+}

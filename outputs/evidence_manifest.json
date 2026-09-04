@@ -1,0 +1,21 @@
+{
+  "full_evidence_local_path": "generated/evidence_ledger_full.json",
+  "full_evidence_sha256": "d6251dd995b80c81aa26058aef3ec35ccdb16313033b5c9d1850580f11f40618",
+  "note": "The full ledger is generated for local verification. The shipped evidence ledger is a deterministic one seed and one regime sample.",
+  "sampled_arms": [
+    "B0",
+    "B1",
+    "B1.5",
+    "RZP",
+    "B2.25",
+    "B2.5",
+    "B2.75",
+    "B2",
+    "B3"
+  ],
+  "sampled_case_count": 100,
+  "sampled_evidence_sha256": "8e24f1e245eacd3db97d3b82739dbf826ff813ff9d47ecd2fe963f39a64549aa",
+  "sampled_regime": "R1_TRANSIENT",
+  "sampled_row_count": 900,
+  "sampled_seed": 1701
+}

@@ -1,0 +1,60 @@
+name: mandateguard-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  clean-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: python -m pip install -e '.[test]'
+      - name: Checksum manifest candidate
+        run: |
+          echo '--- SHA256SUMS CANDIDATE BEGIN ---'
+          python3 scripts/make_checksum_manifest.py
+          echo '--- SHA256SUMS CANDIDATE END ---'
+      - name: Test
+        run: ./scripts/test.sh
+      - name: RecoveryTruth acceptance
+        run: python3 scripts/recoverytruth_check.py
+      - name: Security regression acceptance
+        run: python3 scripts/security_regression_check.py
+      - name: Offline demo
+        run: ./scripts/demo.sh
+        env:
+          MANDATEGUARD_OFFLINE: "1"
+      - name: Deep non-mutating verification
+        run: ./scripts/verify_all.sh
+        env:
+          MANDATEGUARD_OFFLINE: "1"
+      - name: README and report integrity
+        run: |
+          # `! command` is exempt from bash errexit, so the inverted grep must
+          # be an explicit branch or this step can never fail.
+          if grep -nE '\{\{|\}\}' README.md outputs/report.md; then
+            echo "unresolved template tokens found" >&2
+            exit 1
+          fi
+          test -f RECOVERYTRUTH.md
+          test -f SUBMISSION_READINESS.md
+          test -f outputs/manifest.json
+          grep -q '"final": true' outputs/manifest.json
+          grep -q '"B1.5"' outputs/manifest.json
+          test -f outputs/sensitivity.json
+          test -f outputs/sensitivity.png
+          grep -q 'harm priced' outputs/report.md
+      - name: Upload verified evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: mandateguard-outputs
+          path: |
+            outputs/
+            FINDINGS.md
+            RECOVERYTRUTH.md
+            SUBMISSION_READINESS.md
